@@ -1,22 +1,30 @@
-# Estado del proyecto - Entrega 2
+# Estado del proyecto - Entrega 3 (final)
 
-## Qué se hizo para esta entrega
+## Qué se hizo en cada entrega
 
-Para la Entrega 2, el trabajo del grupo consistió en migrar el proyecto de Java a TypeScript con Node.js, cambio autorizado verbalmente por el profesor en clase.
+**Entrega 1** (Java): generación de `productos.txt`, `vendedores.txt` y los archivos
+`ventas_<documento>_<nombre>.txt` con datos pseudoaleatorios. Repositorio original:
+https://github.com/menesesnathalya19-eng/Entrega1VentasJava
 
-El proyecto original en Java de la Entrega 1 se puede consultar aquí: https://github.com/menesesnathalya19-eng/Entrega1VentasJava
+**Entrega 2**: migración del proyecto de Java a TypeScript con Node.js (cambio
+autorizado verbalmente por el profesor en clase), conservando el mismo formato de
+archivos de la Entrega 1.
 
-En esta migración se conservó toda la funcionalidad ya construida en la Entrega 1:
+**Entrega 3** (esta entrega, proyecto completo):
 
-- Generación de `productos.txt`: 15 productos con ID, nombre y precio.
-- Generación de `vendedores.txt`: 8 vendedores con tipo de documento, número, nombres y apellidos.
-- Generación de `ventas_<documento>_<nombre>.txt`: un archivo de ventas por cada vendedor (entre 3 y 8 transacciones cada uno).
-- El programa no solicita ningún dato al usuario y muestra mensaje de finalización exitosa o de error.
+- `src/GenerateInfoFiles.ts`: primer programa con punto de entrada, genera los
+  archivos de productos, vendedores y ventas. Muestra mensaje de éxito o error.
+- `src/main.ts`: segundo programa con punto de entrada. Lee los archivos generados
+  y crea los dos reportes finales:
+  1. `reporte_vendedores.txt`, con nombre y dinero recaudado por vendedor, ordenado
+     de mayor a menor.
+  2. `reporte_productos.txt`, con nombre, precio y cantidad vendida de cada
+     producto, ordenado de mayor a menor según la cantidad vendida.
+  Muestra mensaje de éxito o error.
+- `conclusion.txt`: reflexión final del grupo sobre lo aprendido, las aplicaciones
+  profesionales y las dificultades del proyecto.
 
 ## Qué falta para el proyecto completo
 
-- El programa que procesa los archivos generados y crea los dos reportes finales:
-  1. Reporte de vendedores ordenado de mayor a menor según el dinero recaudado.
-  2. Reporte de productos vendidos ordenado de mayor a menor según la cantidad vendida.
-- Mensaje de éxito/error para ese programa de procesamiento.
-- El archivo `conclusion.txt` con la reflexión final del proyecto.
+Nada pendiente: el proyecto cubre generación de datos, procesamiento de ventas,
+los dos reportes requeridos y la conclusión final.

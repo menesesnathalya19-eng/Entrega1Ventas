@@ -4,3 +4,5 @@ dist/
 ventas_*
 productos.txt
 vendedores.txt
+reporte_vendedores.txt
+reporte_productos.txt

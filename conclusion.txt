@@ -1,0 +1,31 @@
+Conclusión del proyecto
+
+1. Lo aprendido durante el desarrollo del proyecto
+
+Este proyecto nos permitió aplicar en un caso real los conceptos fundamentales de
+programación vistos en el curso: manejo de archivos de texto plano, estructuras de
+datos (listas y mapas), funciones, ciclos y algoritmos de ordenamiento. También
+aprendimos a trabajar con dos programas independientes que se comunican a través de
+archivos (uno genera los datos de entrada y otro los procesa), y a mantener un mismo
+formato de datos entre entregas distintas, incluso migrando de un lenguaje (Java) a
+otro (TypeScript con Node.js).
+
+2. Aplicaciones en nuestra vida profesional
+
+Procesar archivos planos, calcular totales y generar reportes ordenados es una tarea
+común en muchos entornos de trabajo reales: desde sistemas de ventas e inventarios
+hasta análisis de datos administrativos. Lo construido aquí es una versión simplificada
+de procesos que se usan en software de facturación, reportes de desempeño comercial y
+automatización de tareas repetitivas, habilidades que aplican directamente a nuestras
+carreras, sin importar si terminamos trabajando como desarrolladores o en áreas
+administrativas que necesiten entender y usar este tipo de herramientas.
+
+3. Dificultades presentadas durante el desarrollo
+
+El mayor reto fue mantener la compatibilidad de formatos entre las tres entregas,
+para que el programa de reportes pudiera leer sin problema los archivos generados
+previamente por el programa de generación de datos. También tuvimos que coordinarnos
+como grupo para acordar el cambio de lenguaje de Java a TypeScript (autorizado por el
+profesor) y dividir el trabajo en partes claras: generación de datos, procesamiento de
+ventas y generación de reportes, de modo que cada integrante pudiera aportar según su
+disponibilidad y nivel de experiencia.

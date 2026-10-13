@@ -1,6 +1,8 @@
-# Generador de archivos de ventas
+# Generador y procesador de archivos de ventas
 
-Proyecto en TypeScript con Node.js que genera archivos de texto de prueba para una futura aplicación de procesamiento de ventas. No procesa ventas ni solicita datos por teclado.
+Proyecto en TypeScript con Node.js que genera archivos de texto de prueba (productos,
+vendedores y ventas) y luego los procesa para generar los reportes finales de ventas.
+No solicita datos por teclado.
 
 ## Integrantes
 - INGRID VIVIANA ARENAS MALDONADO
@@ -17,10 +19,13 @@ Proyecto en TypeScript con Node.js que genera archivos de texto de prueba para u
 
 ```sh
 pnpm install
-pnpm run generate
+pnpm run generate   # genera productos.txt, vendedores.txt y ventas_*.txt
+pnpm run report     # procesa esos archivos y genera los reportes
 ```
 
-`pnpm run build` compila TypeScript a `dist/`; `pnpm start` ejecuta el JavaScript compilado. La generación escribe los archivos en el directorio de trabajo actual.
+`pnpm run build` compila TypeScript a `dist/`; `pnpm start` ejecuta el generador de
+archivos compilado. Todo se lee y escribe en el directorio de trabajo actual, así que
+`pnpm run report` debe ejecutarse después de `pnpm run generate`.
 
 ## Archivos generados
 
@@ -30,11 +35,22 @@ pnpm run generate
 
 Los datos son pseudoaleatorios y los campos están separados por punto y coma; no se incluyen encabezados. Al ejecutar el generador se sobrescriben `productos.txt`, `vendedores.txt` y los archivos de ventas cuyo nombre coincida. Los archivos de ventas antiguos con nombres diferentes no se borran automáticamente.
 
+## Reportes generados
+
+- `reporte_vendedores.txt`: un vendedor por línea (`NombresApellidos;DineroRecaudado`), ordenado de mayor a menor según el dinero recaudado.
+- `reporte_productos.txt`: un producto por línea (`Nombre;Precio;CantidadVendida`), ordenado de mayor a menor según la cantidad vendida.
+
+El dinero recaudado por vendedor es la suma de `cantidad × precio` de cada venta registrada en su archivo `ventas_*.txt`; la cantidad vendida por producto es la suma de las cantidades de ese producto en todos los archivos de ventas.
+
 ## Estructura
 
 ```text
-src/GenerateInfoFiles.ts  # Generador y punto de entrada
+src/GenerateInfoFiles.ts  # Genera productos, vendedores y ventas (primer programa con "main")
+src/main.ts                # Procesa las ventas y genera los reportes (segundo programa con "main")
 productos.txt             # Datos generados de productos
 vendedores.txt            # Datos generados de vendedores
 ventas_*.txt              # Datos generados de ventas
+reporte_vendedores.txt    # Reporte de vendedores por dinero recaudado
+reporte_productos.txt     # Reporte de productos por cantidad vendida
+conclusion.txt            # Reflexión final del proyecto
 ```

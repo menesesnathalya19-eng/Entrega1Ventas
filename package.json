@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/GenerateInfoFiles.js",
-    "generate": "pnpm run build && pnpm start"
+    "generate": "pnpm run build && pnpm start",
+    "report": "pnpm run build && node dist/main.js"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
